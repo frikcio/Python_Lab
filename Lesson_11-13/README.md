@@ -9,3 +9,4 @@ create table "all_in" to join all data.
 
 JOIN authors:
 
+SELECT title, genre, name, year FROM all_in FULL JOIN books ON (all_in.title_id = books.id) FULL JOIN genres ON (all_in.genre_id = genres.id) FULL JOIN authors ON (all_in.author_id = authors.id);
