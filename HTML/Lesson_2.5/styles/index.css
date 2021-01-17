@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+}
+
+header{
+	min-width: 1220px;
+	background-color: orange;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header{
+	display: flex;
+	justify-content: space-around; 
+}
+header img{
+	padding-left: 20px;
+	height: 60px;
+}
+
+header div{
+	padding-right: 15px;
+}
+
+main{
+	display: flex;
+	justify-content: space-between;
+}
+
+#a1 {
+	padding-top: 10px;
+	text-align: center;
+	background-color: pink;
+	min-width: 210px;
+}
+
+content {
+	min-width: 800px;
+	padding-top: 20px;
+	text-align: center;
+}
+span, div {
+	font-size: 14px;
+}
+div img {
+	padding-top: 10px;
+	height: 100px;
+}
+
+#a2 {
+	padding-top: 10px;
+	text-align: center;
+	background-color: lightblue;
+	
+	min-width: 210px;
+}
+
+footer {
+	padding-top: 10px;
+	text-align: center;
+	background-color: lightgreen;
+	height: 50px;
+}
+section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+section > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 300px;
+	margin-bottom: 20px;
+	width: 250px;
+	background-color: white;
+	border: 2px solid gray;
+	border-radius: 25px; 
+	padding-bottom: 15px;
+}
+
+div div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+div a{
+	padding-top: 4px;
+	margin-left: 40%;
+	width: 50px;
+	height: 20px;
+	text-decoration: none;
+	border-radius: 20px;
+	background-color: darkviolet;
+	color: white;
+}
+
+div.holder {
+	height: 50px;
+	width: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px black solid;
+	border-radius: 10px 10px 0 0;
+}
+
+div.item:first-child{
+	order: -1;
+	padding: 2% 23.2% 2% 23.2%;
+	background-color: red;
+	border-radius: 10px 0 0 0;
+}
+
+div.item:last-child{
+	order: -1;
+	padding: 2% 23.2% 2% 23.2%;
+	background-color: orange;
+	border-radius: 0 10px 0 0;
+}
+
+div.item:nth-child(2){
+	order: 1;
+	padding: 2% 14.9% 2% 14.9%;
+	background-color: lightblue;
+	background-size: 30px;
+}
+
+div.item:nth-child(4){
+	order: 2;
+	padding: 2% 14.9% 2% 14.9%;
+	background-color: green;
+	background-size: 30px;
+}
+
+div.item:nth-child(3){
+	padding: 2% 14.9% 2% 14.9%;
+	background-color: darkviolet;
+	background-size: 30px
+}
