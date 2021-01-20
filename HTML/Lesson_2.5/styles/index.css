@@ -4,7 +4,7 @@
 
 header{
 	min-width: 1220px;
-	background-color: orange;
+	background-color: #d3b714;
 	height: 100px;
 	display: flex;
 	justify-content: space-between;
@@ -28,7 +28,7 @@ main{
 	justify-content: space-between;
 }
 
-#a1 {
+#aside1 {
 	padding-top: 10px;
 	text-align: center;
 	background-color: pink;
@@ -44,11 +44,19 @@ span, div {
 	font-size: 14px;
 }
 div img {
-	padding-top: 10px;
+	margin: 5px 0 5px 0;
 	height: 100px;
 }
 
-#a2 {
+span + h2{
+	margin-top: 10px;
+}
+
+img + b{
+	margin-bottom: 10px;
+}
+
+#aside2 {
 	padding-top: 10px;
 	text-align: center;
 	background-color: lightblue;
@@ -57,6 +65,7 @@ div img {
 }
 
 footer {
+	min-width: 1220px;
 	padding-top: 10px;
 	text-align: center;
 	background-color: lightgreen;
@@ -67,10 +76,11 @@ section {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-section > div{
+section > div.card{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	height: 300px;
 	margin-bottom: 20px;
 	width: 250px;
@@ -80,15 +90,14 @@ section > div{
 	padding-bottom: 15px;
 }
 
-div div{
+div.card div{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-div a{
+div a.Go{
 	padding-top: 4px;
-	margin-left: 40%;
 	width: 50px;
 	height: 20px;
 	text-decoration: none;
@@ -98,6 +107,7 @@ div a{
 }
 
 div.holder {
+	margin-top: 50px;
 	height: 50px;
 	width: 200px;
 	display: flex;
@@ -106,36 +116,39 @@ div.holder {
 	border-radius: 10px 10px 0 0;
 }
 
+div.item {
+	padding-top: 4px;
+	min-width: 60px;
+}
+
 div.item:first-child{
-	order: -1;
-	padding: 2% 23.2% 2% 23.2%;
-	background-color: red;
-	border-radius: 10px 0 0 0;
+	min-width: 100px;
+	order: 1;
+	background-color: #fd644d;
+	border-radius: 8px 0 0 0;
 }
 
 div.item:last-child{
-	order: -1;
-	padding: 2% 23.2% 2% 23.2%;
+	min-width: 100px;
+	order: 2;
 	background-color: orange;
-	border-radius: 0 10px 0 0;
+	border-radius: 0 8px 0 0;
 }
 
 div.item:nth-child(2){
-	order: 1;
-	padding: 2% 14.9% 2% 14.9%;
-	background-color: lightblue;
-	background-size: 30px;
+	order: 4;
+	flex-grow: 1;
+	background-color: #4983b2;
 }
 
 div.item:nth-child(4){
-	order: 2;
-	padding: 2% 14.9% 2% 14.9%;
+	order: 5;
+	flex-grow: 1;
 	background-color: green;
-	background-size: 30px;
 }
 
 div.item:nth-child(3){
-	padding: 2% 14.9% 2% 14.9%;
+	order: 3;
+	flex-grow: 1;
 	background-color: darkviolet;
-	background-size: 30px
 }

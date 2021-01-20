@@ -4,11 +4,11 @@
     border-radius: 5px;
 }
 
-[href^="https"], .text-box div p {
+.holder [href^="https"], .text-box div p {
 	color: red;
 }
 
-ul.list > :last-child {
+ul.list > li:last-child {
 	background: green;
 }
 
