@@ -15,13 +15,13 @@ if (y >= 0) {
 console.log('Task 2')
 let sum = 0;
 let count = 0;
-for (let i = 0; ; i++) {
+for (let i = 0; count != 10 ; i++) {
 	if (i % 5 === 0){
 		sum+=i
 		count+=1
 	}
-	if (count===10) break
 } 
+
 console.log('Результат суммирования: ' + sum)
 
 console.log('Task 3')
