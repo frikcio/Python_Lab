@@ -1,7 +1,9 @@
 console.log("Task 1")
 
 function someFunc() {
-	console.log(arguments)
+    for (let index in arguments) {
+        console.log(arguments[index])
+    }
 	console.log(arguments.callee)
 	
 }
@@ -11,27 +13,25 @@ someFunc(10, false, "google")
 
 console.log("Task 2")
 
-function userInfo(person) {
-	if (person.registered === true) {
-		console.log("Дата регистрации: "+ person.date)
-	} else console.log("Незарегистрированный пользователь: "+person.name)
-}
-function getInfo(person){
-	return userInfo(this)
+function userInfo() {
+    const {name, registered, date} = this
+	if (registered === true) {
+		console.log("Дата регистрации: "+ date)
+	} else console.log("Незарегистрированный пользователь: "+ name)
 }
 
  const person1 = {
  	name: "Anton",
  	registered: true,
  	date: "23.01.2019",
- 	getInfo
+ 	getInfo: userInfo
  }
 
   const person2 = {
  	name: "Octo",
  	registered: false,
  	date: "",
- 	getInfo
+ 	getInfo: userInfo
  }
 
 person1.getInfo()
@@ -105,11 +105,13 @@ const comments = {
 
 function getPostComments (postId) {
 	let mass = []
-	for (let Ckey in comments) { //key in comments
-		if (comments[Ckey].postId===postId){
-			for (let Ukey in users) { //key in users
-				if (parseInt(Ukey) === comments[Ckey].author){
-					mass.push({aurhor : users[Ukey].name, text : comments[Ckey].text})
+	for (let cKey in comments) { //key in comments
+        comment = comments[cKey]
+		if (comment.postId===postId){
+			for (let uKey in users) { //key in users
+                user = users[uKey]
+				if (parseInt(uKey) === comment.author){
+					mass.push({aurhor : user.name, text : comment.text})
 				}
 			}
 			

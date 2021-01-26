@@ -3,10 +3,10 @@ console.log("Task 1")
 const letters = [];
 const string = "Backend As A Service"
 
-function CutString(string){
-	let cuted = string.split(" ")
-	for (let i = 0; i != cuted.length; i++) {
-		letters.push(cuted[i][0])
+function CutString(someString){
+	let slicedString = someString.split(" ")
+	for (let i = 0; i != slicedString.length; i++) {
+		letters.push(slicedString[i][0])
 	}
 }
 
@@ -24,9 +24,10 @@ function type(something){
 		let updateDate = []
 
 		for (let i = 0; i!=getMetods.length; i++) {
-			if (getMetods[i]< 10) {
-				updateDate.push("0"+(getMetods[i]))
-			} else updateDate.push((getMetods[i]))}
+			someMetod = getMetods[i]
+			if (someMetod < 10) {
+				updateDate.push("0"+(someMetod))
+			} else updateDate.push((someMetod))}
 		
 		console.log(
 			updateDate[0]+"."+ //Day
