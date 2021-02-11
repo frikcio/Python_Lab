@@ -1,7 +1,7 @@
 """
 1.Вынести класс Employee и классы Recruiter и Programmer в отдельный файл. 
 2.Разместить эти файлы в модуле models.py 
-3.Создать файл app.py, в котором будет выполняться контекст программы. 
+3.Создать файл lesson_4.py, в котором будет выполняться контекст программы. 
 4.Добавить класс Candidate с полями full_name, email, technologies, main_skill, main_skill_grade. 
 5.Добавить класс Vacancy c полями title, main_skill, main_skill_level. 
 6.В функции main в файле app создать 1 рекрутера, 2 программистов, 3 кандидатов и 2 вакансии. 
